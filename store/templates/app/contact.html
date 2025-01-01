@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact Us {% endblock title %}
+<link rel="stylesheet" href="{% static 'app/css/all.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}">
+
+{% block main-content %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message: </strong> {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+<!-- Hero Section -->
+<section id="page-header" class="about-header">
+    <h2>#Let's_talk</h2>
+    <p>LEAVE A MESSAGE, We love to hear from you!</p>
+</section>
+
+<section id="form-details">
+    <form method="post" action="/contact/">
+        {% csrf_token %}
+        <span>LEAVE A MESSAGE</span>
+        <h2>We love to hear from you</h2>
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="content" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn-primary" style="width: 250px;">Submit</button>
+
+        <section id="contact-details" class="section-p1">
+            <div class="details">
+                <span>GET IN TOUCH</span>     
+                <h2>Visit us today</h2>
+                <h3>Details</h3>
+                <div>
+                    <li>
+                        <i class="fa-solid fa-map"></i>
+                        <p>Vastrapur,Ahmedabad</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Pharma@gmail.com</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+91 9875453829</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <p>6:00 - 18:00</p>
+                    </li>
+                </div>
+            </div>
+        </section>
+    </form>
+</section>
+{% endblock main-content %}

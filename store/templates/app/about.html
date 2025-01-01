@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Contact Us {% endblock title %}
+<link rel="stylesheet" href="{% static 'app/css/all.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}">
+
+{% block main-content %}
+
+<!-- Hero Section -->
+<section id="page-header" class="about-header">
+    <h2>#KnowUs</h2>
+    <p>For a wide range of medications, wellness products, vitamins, diet/fitness supplements, herbal products, baby/mother care products and beauty products.</p>
+</Section>
+<section id="about-head" class="section-p1">
+    <img src="{% static 'app/images/p1.webp' %}" alt="">
+    <div>
+        <h2>Who are We?</h2>
+        <p>Pharmacy is an amalgamation of Healthcare offerings, ranging from Prescription Medicines, Healthcare products & Personal care. We are focused on building a Zero Compromise healthcare platform, with the promise of 100% Genuine Medicines, Wide Variety & Fast delivery to our valuable users with an honest and trustworthy approach.</p>
+        <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">A One Stop digital healthcare solution</marquee>
+    </div>
+</section>
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f1.png' %}" alt="">
+        <h6>Online Order</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f2.png' %}" alt="">
+        <h6>Free Shipping</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f3.png' %}" alt="">
+        <h6>Save Money</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f4.png' %}" alt="">
+        <h6>Promotion</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f5.png' %}" alt="">
+        <h6>Happy Sell</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'app/images/features/f6.png' %}" alt="">
+        <h6>F24/7 Support</h6>
+    </div>
+</section>
+{% endblock main-content %}
